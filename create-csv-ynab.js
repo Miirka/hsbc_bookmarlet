@@ -51,7 +51,9 @@ $('tbody tr', $table).each(function(){
 
 	//cells = [Date, Type, Description, Paid Out, Paid In, Balance]
 	// re-order according to YNAB format: "Date,Payee,Category,Memo,Outflow,Inflow"
-	csv = csv + '"' + cells[0] + '","' + cells[2] + '",,"' + cells[1] + '","' + cells[3] + '","' + cells[4] + '"'
+	if (cells[2] != "Balance brought forward") && (cells[2] != "Balance carried forward") {
+		csv = csv + '"' + cells[0] + '","' + cells[2] + '",,"' + cells[1] + '","' + cells[3] + '","' + cells[4] + '"'
+	}
 	
 	csv = csv + nl;
 	
