@@ -1,0 +1,1 @@
+javascript:function%20loadScript(scriptURL)%7Bvar%20scriptElem%3Ddocument.createElement('script')%3BscriptElem.setAttribute('language'%2C'JavaScript')%3BscriptElem.setAttribute('src'%2CscriptURL)%3Bdocument.body.appendChild(scriptElem)%3B%7D%3BloadScript('https://rawgit.com/Miirka/hsbc_bookmarlet/master/create-csv-ynab.js?'+new Date().getTime())%3B
