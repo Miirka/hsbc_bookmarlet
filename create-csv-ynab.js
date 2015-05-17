@@ -53,10 +53,9 @@ $('tbody tr', $table).each(function(){
 	// re-order according to YNAB format: "Date,Payee,Category,Memo,Outflow,Inflow"
 	if (cells[2] != "Balance brought forward" && cells[2] != "Balance carried forward") {
 		csv = csv + '"' + cells[0] + '","' + cells[2] + '",,"' + cells[1] + '","' + cells[3] + '","' + cells[4] + '"'
+		csv = csv + nl;
 	}
 
-	csv = csv + nl;
-	
 });
 
 var data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
